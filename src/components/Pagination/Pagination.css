@@ -1,0 +1,21 @@
+.pagination {
+  margin-top: 25px;
+  display: inline-block;
+}
+.pagination span {
+  cursor: pointer;
+  color: black;
+  float: left;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ffdb7d;
+  margin: 25px 2px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.pagination span.active {
+  background-color: #45509e;
+  color: white;
+}

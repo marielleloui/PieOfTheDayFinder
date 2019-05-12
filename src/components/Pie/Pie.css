@@ -1,0 +1,52 @@
+.Pie {
+    width: 500px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #eee;
+    /* box-shadow: 0 2px 3px #ccc; */
+    margin: 10px auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color: white;
+}
+
+.Pie:hover,
+.Pie:active {
+    background-color: #C0DDF5;
+    /* background-color: #45509e; */
+    /* color: white; */
+}
+
+.itemname {
+    font-weight: bolder;
+    font-size: 1.5em;
+    margin: 16px auto 0;
+}
+
+.store {
+    font-weight: bold;
+    color: #45509e;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+#btn {
+    background-color: #656eb5;
+    color: white;
+}
+
+#btn:hover,
+#btn.active {
+    background-color: #45509e;
+    color: white;
+}
