@@ -92,7 +92,7 @@ class Pies extends Component {
       return console.log("Entries for initial pie list gathered");
     });
 
-    let filtered = pies.filter(el => {
+    let filteredPies = pies.filter(el => {
       return el != null;
     });
     console.log("Pie of the Day list finalised");
@@ -114,14 +114,14 @@ class Pies extends Component {
     var displayPaginated;
 
     if (this.state.disp_class === "displayTwo") {
-      displayPaginated = filtered.slice(5);
+      displayPaginated = filteredPies.slice(5);
     } else {
-      displayPaginated = filtered.slice(0, 5);
+      displayPaginated = filteredPies.slice(0, 5);
     }
 
-    var final = "";
+    var searchResults = "";
     if (this.state.results) {
-      final = this.state.results.map(item => {
+      searchResults = this.state.results.map(item => {
         return (
           <Search
             name={item[0]}
@@ -142,15 +142,15 @@ class Pies extends Component {
           match={matchPieStore}
           origPies={this.state.pies}
           stores={this.state.stores}
-          filteredPies={filtered}
+          filteredPies={filteredPies}
           addSomething={(stateValueFromChild, queryinput) =>
             addSomething(stateValueFromChild, queryinput)
           }
         />
-        {final.length === 0 ? displayPaginated : final}
+        {searchResults.length === 0 ? displayPaginated : searchResults}
         <br />
         <br />
-        {final.length === 0 && (
+        {searchResults.length === 0 && (
           <Pagination
             onClick={paginateContents}
             classOne={this.state.current_page === "1" ? "active" : ""}
