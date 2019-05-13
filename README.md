@@ -7,7 +7,7 @@
 
 ## About the Application
 
-This __Pie of the Day Finder__ is a simple web application built using __React__, and other tools and technologies which will be further described in this README. The application retrieves the following information from two API endpoints, https://pie.now.sh/pies and https://pie.now.sh/stores:
+This __Pie of the Day Finder__ is a simple web application built using __React__, and other tools and technologies which will be further described in this README. The application retrieves the following information from the two API endpoints, https://pie.now.sh/pies and https://pie.now.sh/stores:
 
 * __name__ of the pie
 * __price__ of the pie
@@ -17,7 +17,7 @@ This __Pie of the Day Finder__ is a simple web application built using __React__
 * __rating__
 * __contact number__
 
-Only information regarding *Pies of the Day* (i.e. `"isPieOfTheDay": true`) are retrieved from the APIs and displayed on the web application.
+Only the information regarding *Pies of the Day* (i.e. `"isPieOfTheDay": true`) are retrieved from the APIs and displayed on the web application.
 
 ![Home View](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-home-view.png)
 
