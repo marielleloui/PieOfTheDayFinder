@@ -45,7 +45,7 @@ The entire searching logic was done within the application itself, as the base A
 Similarly, pagination logic was also completely done within the application, without the help of an API. The base API (`https://pie.now.sh/pies?_page=1&_limit=5`) supports pagination; however, the API's pagination functionality does not work with this application's requirement —which is to only include items where `"isPieOfTheDay"` is  `true`.
 
 ## Testing
-A few simple tests were created for two of the components within the *React* application. __Jest__ was used for running tests, and __Enzyme__ was used for providing testing utility functions (i.e. `shallow`) for components. Further tests may likewise be designed for other components.
+A few simple tests were created for two of the components within the *React* application. __Jest__ was used for running tests, and __Enzyme__ was used for providing testing utility functions (e.g. `shallow`) for components. Further tests may likewise be designed for other components.
 
 ## Further Improvements
 In terms of application functionality, a sorting feature may be added in order to enable the sorting of pie prices in ascending or descending order.
