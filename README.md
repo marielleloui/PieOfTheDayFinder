@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pie of the Day Finder
+---
+## Author
+#### Marielle Louise Cruz
+* https://github.com/marielleloui
+* https://linkedin.com/in/marielle-louise-cruz
+
+## About the Application
+
+This __Pie of the Day Finder__ is a simple web application built using __React__, and other tools and technologies which will be further described in this README. The application retrieves the following information from two API endpoints, https://pie.now.sh/pies and https://pie.now.sh/stores:
+
+* __name__ of the pie
+* __price__ of the pie
+* __quantity__
+* __store name__
+* __address__
+* __rating__
+* __contact number__
+
+Only information regarding *Pies of the Day* (i.e. `"isPieOfTheDay": true`) are retrieved from the APIs and displayed on the web application.
+
+![Home View](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-home-view.png)
+
+## Features
+* Retrieves and consolidates *pie* and *store* information from two API endpoints
+* Displays *Pie of the Day* information via expandable and collapsible UI cards
+* Paginates the filtered pies list using pagination controls, based on a 5 pies per page limit
+* Enables non-case sensitive searching of pie names via a dynamic search bar
+
+## Technology Stack
+* __[React](http://facebook.github.io/react/)__ for building the UI and managing the presentation logic of the application
+* __[Create React App](https://github.com/facebook/create-react-app)__ for providing a modern build setup for React
+* __[Axios](https://github.com/axios/axios)__ for making HTTP GET requests to the API
+* __[Material UI](https://material-ui.com/)__ for implementing Google's Material Design on some application components
+* __[Babel](https://babeljs.io/)__ for compiling ES2015+ down to ES5 compatible code
+* __[WebPack](http://webpack.github.io/)__ for bundling code down to a single file and enabling hot module reloading
+* __[Jest](https://jestjs.io/)__ + __[Enzyme](https://airbnb.io/enzyme/)__ for testing
+* __[Heroku](https://www.heroku.com/)__ for running a live version of the application in the cloud
+* __[Git](https://github.com/)__ for tracking changes in the source code
+* __[VSCode](https://code.visualstudio.com/)__, code editor used to build the application
+
+## Searching and Pagination
+The entire searching logic was done within the application itself, as the base API, https://pie.now.sh, does not support searching. An alternative approach to this is to create a db.json file, use a [JSON server](https://github.com/typicode/json-server), and immediately filter search results using an AJAX call to the server.
+
+Similarly, pagination logic was also completely done within the application, without the help of an API. The base API (`https://pie.now.sh/pies?_page=1&_limit=5`) supports pagination; however, the API's pagination functionality does not work with this application's requirement —which is to only include items where `"isPieOfTheDay"` is  `true`.
+
+## Testing
+A few simple tests were created for two of the components within the *React* application. __Jest__ was used for running tests, and __Enzyme__ was used for providing testing utility functions (i.e. `shallow`) for components. Further tests may likewise be designed for other components.
+
+## Further Improvements
+In terms of application functionality, a sorting feature may be added in order to enable the sorting of pie prices in ascending or descending order.
+
+Regarding the structure of the application itself, *Redux* may be used to manage state more effectively. *React Hooks* may also be utilised if function-based components —as opposed to class-based components —are desired.
+
+## View the Live Site
+
+### LINK: https://pieoftheday-finder.herokuapp.com/
+_(Best viewed on desktop via Google Chrome)_
+
+---
+# Site Images
+
+![Home View](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-home-view.png)
+
+![Default List](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-default-list.png)
+
+![Pagination](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-pagination.png)
+
+![Search Results](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-search.png)
+
+---
 
 ## Available Scripts
 
-In the project directory, you can run:
+If you want to run this application locally, you may use the following:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Launches the test runner in the interactive watch mode.
