@@ -2,6 +2,7 @@
   background-color: darkgray;
   padding-bottom: 25px;
 }
+
 .footerline {
   font-size: 14px;
   color: white;
@@ -12,22 +13,27 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 .footer-social-icons {
   width: 350px;
   display: block;
   margin: 0 auto;
 }
+
 .social-icon {
   color: #fff;
 }
+
 .social-icons li {
   vertical-align: top;
   display: inline;
 }
+
 .social-icons a {
   color: #fff;
   text-decoration: none;
 }
+
 .fa-linkedin {
   padding: 10px 14px;
   -o-transition: 0.5s;
@@ -36,11 +42,12 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 5px;
-  /* background-color: #322f30; */
 }
+
 .fa-linkedin:hover {
   background-color: #0073a4;
 }
+
 .fa-github {
   padding: 10px 14px;
   -o-transition: 0.5s;
@@ -49,8 +56,8 @@ ul {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 5px;
-  /* background-color: #24282d; */
 }
+
 .fa-github:hover {
   background-color: #24282d;
 }

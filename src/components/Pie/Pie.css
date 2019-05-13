@@ -3,7 +3,6 @@
     padding: 16px;
     text-align: center;
     border: 1px solid #eee;
-    /* box-shadow: 0 2px 3px #ccc; */
     margin: 10px auto;
     box-sizing: border-box;
     cursor: pointer;
@@ -13,8 +12,6 @@
 .Pie:hover,
 .Pie:active {
     background-color: #C0DDF5;
-    /* background-color: #45509e; */
-    /* color: white; */
 }
 
 .itemname {
