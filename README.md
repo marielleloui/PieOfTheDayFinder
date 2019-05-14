@@ -19,6 +19,8 @@ This __Pie of the Day Finder__ is a simple web application built using __React__
 
 Only the information regarding *Pies of the Day* (i.e. `"isPieOfTheDay": true`) are retrieved from the APIs and displayed on the web application.
 
+*(When the application is loaded for the first time, it may take a while for the API data to be retrieved.)*
+
 ![Home View](https://github.com/marielleloui/PieOfTheDayFinder/blob/master/public/images/piefinder-home-view.png)
 
 ## Features
